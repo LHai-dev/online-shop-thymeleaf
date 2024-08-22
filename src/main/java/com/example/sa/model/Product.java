@@ -1,4 +1,4 @@
-package com.example.sa;
+package com.example.sa.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -21,6 +21,8 @@ public class Product {
     // Getter and Setter for 'name'
     private String name;
 
+    private String description;
+
     // Getter and Setter for 'category'
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
@@ -30,18 +32,9 @@ public class Product {
     // Getter and Setter for 'price'
     private Double price;
 
-    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Image> images = new ArrayList<>();
+    @ElementCollection
+    @CollectionTable(name = "product_images", joinColumns = @JoinColumn(name = "product_id"))
+    @Column(name = "image")
+    private List<String> images = new ArrayList<>();
 
-    // Add a method to add images to the product
-    public void addImage(Image image) {
-        images.add(image);
-        image.setProduct(this);
-    }
-
-    // Add a method to remove images from the product
-    public void removeImage(Image image) {
-        images.remove(image);
-        image.setProduct(null);
-    }
 }

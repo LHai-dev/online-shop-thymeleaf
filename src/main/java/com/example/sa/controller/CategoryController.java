@@ -1,5 +1,7 @@
-package com.example.sa;
+package com.example.sa.controller;
 
+import com.example.sa.model.Category;
+import com.example.sa.service.CategoryService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;

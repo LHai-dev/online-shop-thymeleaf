@@ -1,11 +1,10 @@
-package com.example.sa;
+package com.example.sa.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-// Category.java
 @Entity
 @Data
 @NoArgsConstructor
@@ -17,6 +16,5 @@ public class Category {
 
     private String name;
 
-    // Getters and Setters
 }
 

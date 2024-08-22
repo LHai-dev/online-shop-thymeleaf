@@ -1,5 +1,7 @@
-package com.example.sa;
+package com.example.sa.service;
 
+import com.example.sa.model.Category;
+import com.example.sa.repository.CategoryRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

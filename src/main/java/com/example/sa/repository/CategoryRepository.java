@@ -1,5 +1,6 @@
-package com.example.sa;
+package com.example.sa.repository;
 
+import com.example.sa.model.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 // CategoryRepository.java

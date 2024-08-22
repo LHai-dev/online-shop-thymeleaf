@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      lang="en"
+      >
+<!-- tag::duet[] -->
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">hai Thymeleaf</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <script type="module" th:src="@{/webjars/duetds__date-picker/dist/duet/duet.esm.js}"></script>
+    <script nomodule th:src="@{/webjars/duetds__date-picker/dist/duet/duet.js}"></script>
+    <script th:src="@{/webjars/luxon/build/global/luxon.min.js}"></script>
+    <link rel="stylesheet" th:href="@{/webjars/duetds__date-picker/dist/duet/themes/default.css}"/>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" th:href="@{/css/application.css}">
 </head>
+<!-- end::duet[] -->
 <body>
-$END$
+
 </body>
 </html>
